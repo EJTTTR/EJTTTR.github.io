@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Market RD - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f5f6fa;
+        }
+        .navbar {
+            background-color: #1a1a2e;
+        }
+        .navbar-brand, .nav-link, .navbar-toggler-icon {
+            color: #fff !important;
+        }
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .chart-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Tech Market RD - Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pedidos.html"><i class="bi bi-cart"></i> Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categorias.html"><i class="bi bi-tags"></i> Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="populares.html"><i class="bi bi-star"></i> Populares</a></li>
+                     <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-person"></i> Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <section class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="fw-bold">📊 Dashboard de Ventas</h1>
+            <input type="date" class="form-control w-auto">
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="chart-card">
+                    <h5 class="mb-3">Ventas por Semana (Mes Actual)</h5>
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="chart-card">
+                    <h5 class="mb-3">Distribución de Productos Vendidos</h5>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Tech Market RD. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gráfico de barras
+        new Chart(document.getElementById('barChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                datasets: [{
+                    label: 'Ventas (unidades)',
+                    data: [120, 90, 150, 100],
+                    backgroundColor: '#0f3460'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // Gráfico de pastel
+        new Chart(document.getElementById('pieChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Laptops', 'Monitores', 'Teclados', 'Mouses'],
+                datasets: [{
+                    data: [35, 25, 20, 20],
+                    backgroundColor: ['#e94560', '#16213e', '#0f3460', '#533483']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

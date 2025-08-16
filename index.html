@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Market RD - Prototipo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f6fa;
+        }
+        .navbar {
+            background-color: #1a1a2e;
+        }
+        .navbar-brand, .nav-link, .navbar-toggler-icon {
+            color: #fff !important;
+        }
+        .product-card {
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Tech Market RD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Mis pedidos.html"><i class="bi bi-bag"></i> Mis Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href=""><i class="bi bi-person"></i> Mi Cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Página principal -->
+    <section class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Bienvenido a Tech Market RD</h1>
+            <p>Tu tienda de hardware con recomendaciones inteligentes</p>
+        </div>
+        <h2 class="mb-4">Recomendaciones para ti</h2>
+        <div class="row g-4">
+            <!-- Producto 1 -->
+            <div class="col-md-3">
+                <div class="card product-card"
+                     data-bs-toggle="modal"
+                     data-bs-target="#productoModal"
+                     data-nombre="Laptop Gamer"
+                     data-descripcion="Potencia y velocidad para gaming"
+                     data-precio="$1,200 USD"
+                     data-img="img/Laptop.png"
+                     data-rating="4.8/5 (250 reseñas)">
+                    <img src="img/Laptop.png" class="card-img-top" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop Gamer</h5>
+                        <p class="card-text">Potencia y velocidad para gaming</p>
+                        <button class="btn btn-success w-100"><i class="bi bi-cart-plus"></i> Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col-md-3">
+                <div class="card product-card"
+                     data-bs-toggle="modal"
+                     data-bs-target="#productoModal"
+                     data-nombre="Procesador Intel i7"
+                     data-descripcion="Rendimiento profesional"
+                     data-precio="$320 USD"
+                     data-img="img/Z2heTbscnwpDsQNjJzxH2X.png"
+                     data-rating="4.7/5 (180 reseñas)">
+                    <img src="img/Z2heTbscnwpDsQNjJzxH2X.png" class="card-img-top" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Procesador Intel i7</h5>
+                        <p class="card-text">Rendimiento profesional</p>
+                        <button class="btn btn-success w-100"><i class="bi bi-cart-plus"></i> Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-md-3">
+                <div class="card product-card"
+                     data-bs-toggle="modal"
+                     data-bs-target="#productoModal"
+                     data-nombre="SSD 1TB"
+                     data-descripcion="Almacenamiento ultrarrápido"
+                     data-precio="$150 USD"
+                     data-img="img/516yn6znnLL.png"
+                     data-rating="4.9/5 (300 reseñas)">
+                    <img src="img/516yn6znnLL.png" class="card-img-top" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">SSD 1TB</h5>
+                        <p class="card-text">Almacenamiento ultrarrápido</p>
+                        <button class="btn btn-success w-100"><i class="bi bi-cart-plus"></i> Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col-md-3">
+                <div class="card product-card"
+                     data-bs-toggle="modal"
+                     data-bs-target="#productoModal"
+                     data-nombre="Tarjeta gráfica RTX 4070"
+                     data-descripcion="Rendimiento para gamers exigentes"
+                     data-precio="$650 USD"
+                     data-img="Img vistas/41lEjwNYnYL.png"
+                     data-rating="4.9/5 (400 reseñas)">
+                    <img src="Img vistas/41lEjwNYnYL.png" class="card-img-top" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta gráfica RTX 4070</h5>
+                        <p class="card-text">Rendimiento para gamers exigentes</p>
+                        <button class="btn btn-success w-100 mb-2"><i class="bi bi-cart-plus"></i> Añadir</button>
+                        <button class="btn btn-warning w-100" onclick="verificarCompatibilidad(event)"><i class="bi bi-gear"></i> Verificar compatibilidad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Detalle Producto -->
+    <div class="modal fade" id="productoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalles del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6">
+                        <img id="modal-img" src="" class="img-fluid rounded" alt="Producto">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 id="modal-nombre"></h3>
+                        <p id="modal-descripcion" class="text-muted"></p>
+                        <h4 id="modal-precio" class="text-success"></h4>
+                        <p><i class="bi bi-star-fill text-warning"></i> <span id="modal-rating"></span></p>
+                        <label for="cantidad" class="form-label mt-3">Cantidad</label>
+                        <input type="number" id="cantidad" class="form-control w-50" value="1" min="1">
+                        <div class="mt-4 d-flex gap-2">
+                            <button class="btn btn-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar al carrito</button>
+                            <button class="btn btn-primary flex-fill"><i class="bi bi-bag"></i> Comprar ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Tech Market RD. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function () {
+                document.getElementById('modal-nombre').textContent = this.dataset.nombre;
+                document.getElementById('modal-descripcion').textContent = this.dataset.descripcion;
+                document.getElementById('modal-precio').textContent = this.dataset.precio;
+                document.getElementById('modal-img').src = this.dataset.img;
+                document.getElementById('modal-rating').textContent = this.dataset.rating;
+            });
+        });
+
+        function verificarCompatibilidad(e) {
+            e.stopPropagation();
+            alert("Función conceptual: Verificando compatibilidad de la RTX 4070 con tu PC...");
+        }
+    </script>
+</body>
+</html>

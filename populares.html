@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Populares</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+</style>
+
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">Admin Dashboard</a>
+             <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pedidos.html"><i class="bi bi-cart"></i> Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categorias.html"><i class="bi bi-tags"></i> Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="populares.html"><i class="bi bi-star"></i> Populares</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Título -->
+    <div class="container my-4">
+        <h2 class="text-center mb-4">Productos más Populares</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <img src="Img vistas/41lEjwNYnYL.png" class="card-img-top" alt="Tarjeta Gráfica">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Gráfica RTX 4070</h5>
+                        <p class="card-text">Precio: RD$50,000 </p>
+                        <span class="badge bg-success">120 ventas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <img src="img/Z2heTbscnwpDsQNjJzxH2X.png" class="card-img-top" alt="Procesador">
+                    <div class="card-body">
+                        <h5 class="card-title">Intel i7 13700K</h5>
+                        <p class="card-text">Precio: RD$35,000 </p>
+                        <span class="badge bg-success">98 ventas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0">
+                    <img src="img/516yn6znnLL.png" class="card-img-top" alt="SSD">
+                    <div class="card-body">
+                        <h5 class="card-title">SSD NVMe 1TB</h5>
+                        <p class="card-text">Precio: RD$5000 </p>
+                        <span class="badge bg-success">140 ventas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
